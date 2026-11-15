@@ -1,0 +1,245 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "base": "millstone:block/millstone_base",
+    "top1": "millstone:block/millstone_top1",
+    "top2": "millstone:block/millstone_top2",
+    "particle": "millstone:block/millstone_base"
+  },
+  "elements": [
+    {
+      "name": "Base",
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        6,
+        15
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          8,
+          3,
+          8
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            7,
+            0,
+            14,
+            3
+          ],
+          "texture": "#base"
+        },
+        "east": {
+          "uv": [
+            7,
+            3,
+            14,
+            6
+          ],
+          "texture": "#base"
+        },
+        "south": {
+          "uv": [
+            7,
+            6,
+            14,
+            9
+          ],
+          "texture": "#base"
+        },
+        "west": {
+          "uv": [
+            7,
+            9,
+            14,
+            12
+          ],
+          "texture": "#base"
+        },
+        "up": {
+          "uv": [
+            7,
+            7,
+            0,
+            0
+          ],
+          "texture": "#base"
+        },
+        "down": {
+          "uv": [
+            7,
+            7,
+            0,
+            14
+          ],
+          "texture": "#base"
+        }
+      }
+    },
+    {
+      "name": "Top1",
+      "from": [
+        3,
+        14,
+        3
+      ],
+      "to": [
+        13,
+        16,
+        13
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          8,
+          15,
+          8
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            5,
+            0,
+            10,
+            1
+          ],
+          "texture": "#top1"
+        },
+        "east": {
+          "uv": [
+            5,
+            1,
+            10,
+            2
+          ],
+          "texture": "#top1"
+        },
+        "south": {
+          "uv": [
+            5,
+            2,
+            10,
+            3
+          ],
+          "texture": "#top1"
+        },
+        "west": {
+          "uv": [
+            5,
+            3,
+            10,
+            4
+          ],
+          "texture": "#top1"
+        },
+        "up": {
+          "uv": [
+            5,
+            5,
+            0,
+            0
+          ],
+          "texture": "#top1"
+        },
+        "down": {
+          "uv": [
+            5,
+            5,
+            0,
+            10
+          ],
+          "texture": "#top1"
+        }
+      }
+    },
+    {
+      "name": "Top2",
+      "from": [
+        4,
+        12,
+        4
+      ],
+      "to": [
+        12,
+        14,
+        12
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          8,
+          13,
+          8
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            8,
+            0,
+            16,
+            2
+          ],
+          "texture": "#top2"
+        },
+        "east": {
+          "uv": [
+            8,
+            2,
+            16,
+            4
+          ],
+          "texture": "#top2"
+        },
+        "south": {
+          "uv": [
+            8,
+            4,
+            16,
+            6
+          ],
+          "texture": "#top2"
+        },
+        "west": {
+          "uv": [
+            8,
+            6,
+            16,
+            8
+          ],
+          "texture": "#top2"
+        },
+        "up": {
+          "uv": [
+            8,
+            8,
+            0,
+            0
+          ],
+          "texture": "#top2"
+        },
+        "down": {
+          "uv": [
+            8,
+            8,
+            0,
+            16
+          ],
+          "texture": "#top2"
+        }
+      }
+    }
+  ]
+}

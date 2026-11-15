@@ -1,0 +1,24 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:quartz_block"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    },
+    {
+      "item": "minecraft:quartz_bricks"
+    },
+    {
+      "item": "minecraft:quartz_pillar"
+    },
+    {
+      "item": "minecraft:chiseled_quartz_block"
+    }
+  ],
+  "result": {
+    "id": "minecraft:quartz",
+    "count": 4
+  }
+}

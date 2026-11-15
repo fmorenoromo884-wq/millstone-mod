@@ -1,0 +1,24 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:blackstone"
+    },
+    {
+      "item": "minecraft:polished_blackstone"
+    },
+    {
+      "item": "minecraft:polished_blackstone_bricks"
+    },
+    {
+      "item": "minecraft:cracked_polished_blackstone_bricks"
+    },
+    {
+      "item": "minecraft:chiseled_polished_blackstone"
+    }
+  ],
+  "result": {
+    "id": "minecraft:gravel",
+    "count": 1
+  }
+}

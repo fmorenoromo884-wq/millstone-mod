@@ -1,0 +1,21 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:tuff"
+    },
+    {
+      "item": "minecraft:polished_tuff"
+    },
+    {
+      "item": "minecraft:tuff_bricks"
+    },
+    {
+      "item": "minecraft:chiseled_tuff"
+    }
+  ],
+  "result": {
+    "id": "minecraft:gravel",
+    "count": 1
+  }
+}

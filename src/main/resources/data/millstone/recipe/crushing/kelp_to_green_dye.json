@@ -1,0 +1,15 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    }
+  ],
+  "result": {
+    "id": "minecraft:green_dye",
+    "count": 2
+  }
+}

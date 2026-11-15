@@ -1,0 +1,15 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:andesite"
+    },
+    {
+      "item": "minecraft:polished_andesite"
+    }
+  ],
+  "result": {
+    "id": "minecraft:cobblestone",
+    "count": 1
+  }
+}

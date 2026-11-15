@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "millstone:block/millstone"
+    },
+    "lit=true": {
+      "model": "millstone:block/millstone"
+    }
+  }
+}

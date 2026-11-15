@@ -1,0 +1,18 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:azure_bluet"
+    },
+    {
+      "item": "minecraft:white_tulip"
+    },
+    {
+      "item": "minecraft:oxeye_daisy"
+    }
+  ],
+  "result": {
+    "id": "minecraft:light_gray_dye",
+    "count": 2
+  }
+}

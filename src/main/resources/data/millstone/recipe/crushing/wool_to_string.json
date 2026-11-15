@@ -1,0 +1,12 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "result": {
+    "id": "minecraft:string",
+    "count": 4
+  }
+}

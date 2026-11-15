@@ -1,0 +1,12 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:cocoa_beans"
+    }
+  ],
+  "result": {
+    "id": "minecraft:brown_dye",
+    "count": 2
+  }
+}

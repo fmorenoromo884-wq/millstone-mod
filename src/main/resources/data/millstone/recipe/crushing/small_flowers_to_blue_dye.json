@@ -1,0 +1,12 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:cornflower"
+    }
+  ],
+  "result": {
+    "id": "minecraft:blue_dye",
+    "count": 2
+  }
+}

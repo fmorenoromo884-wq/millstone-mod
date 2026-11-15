@@ -1,0 +1,12 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:dandelion"
+    }
+  ],
+  "result": {
+    "id": "minecraft:yellow_dye",
+    "count": 2
+  }
+}

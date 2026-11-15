@@ -1,0 +1,18 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:prismarine"
+    },
+    {
+      "item": "minecraft:prismarine_bricks"
+    },
+    {
+      "item": "minecraft:dark_prismarine"
+    }
+  ],
+  "result": {
+    "id": "minecraft:prismarine_shard",
+    "count": 4
+  }
+}

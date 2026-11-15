@@ -1,0 +1,15 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:granite"
+    },
+    {
+      "item": "minecraft:polished_granite"
+    }
+  ],
+  "result": {
+    "id": "minecraft:red_sand",
+    "count": 1
+  }
+}
