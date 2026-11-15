@@ -8,7 +8,6 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Containers;
@@ -19,7 +18,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
@@ -35,7 +33,7 @@ import java.util.Optional;
 
 public class MillstoneBlockEntity extends BlockEntity implements MenuProvider {
     public static final int CRUSH_TIME = 100;      // 5 segundos
-    public static final int EFFECT_INTERVAL = 10;  // 0.5 segundos
+    public static final int EFFECT_INTERVAL = 6;   // 0.3 segundos
     private static final int SLOT_INPUT = 0;
     private static final int SLOT_OUTPUT = 1;
 
@@ -70,6 +68,8 @@ public class MillstoneBlockEntity extends BlockEntity implements MenuProvider {
 
     /** Solo cliente: ángulo de la rueda para el renderer. */
     public float wheelAngle = 0f;
+    /** Solo cliente: sonido en bucle mientras la rueda gira (Object para no cargar clases de cliente en el servidor). */
+    public Object loopSound;
     public static final float WHEEL_SPEED = 6f; // grados por tick
 
     public final ContainerData data = new ContainerData() {
@@ -148,6 +148,7 @@ public class MillstoneBlockEntity extends BlockEntity implements MenuProvider {
     public static void clientTick(Level level, BlockPos pos, BlockState state, MillstoneBlockEntity be) {
         if (state.getValue(MillstoneBlock.LIT)) {
             be.wheelAngle = (be.wheelAngle + WHEEL_SPEED) % 360f;
+            MillstoneClientSounds.startLoop(be);
         }
     }
 
@@ -167,24 +168,34 @@ public class MillstoneBlockEntity extends BlockEntity implements MenuProvider {
     // ------------------------------------------------------------------ efectos
 
     private void playEffects(Level level, BlockPos pos, ItemStack input) {
-        // Sonido: el "golpe" del material que está adentro (o piedra por defecto)
-        SoundEvent hit = SoundEvents.STONE_HIT;
-        if (input.getItem() instanceof BlockItem bi) {
-            hit = bi.getBlock().defaultBlockState().getSoundType().getHitSound();
-        }
-        level.playSound(null, pos, hit, SoundSource.BLOCKS, 0.7F, 0.6F + level.random.nextFloat() * 0.3F);
+        // Sonido de "polvo de hueso listo" del compostador, con tono variable
+        level.playSound(null, pos, SoundEvents.COMPOSTER_READY, SoundSource.BLOCKS,
+                0.5F, 0.8F + level.random.nextFloat() * 0.5F);
 
-        // Partículas de ruptura del ítem exacto, hacia arriba
-        if (level instanceof ServerLevel sl) {
-            ItemParticleOption opt = new ItemParticleOption(ParticleTypes.ITEM, input.copyWithCount(1));
-            for (int i = 0; i < 8; i++) {
-                double dx = (level.random.nextDouble() - 0.5) * 0.12;
-                double dz = (level.random.nextDouble() - 0.5) * 0.12;
-                sl.sendParticles(opt,
-                        pos.getX() + 0.5 + (level.random.nextDouble() - 0.5) * 0.4,
-                        pos.getY() + 1.0,
-                        pos.getZ() + 0.5 + (level.random.nextDouble() - 0.5) * 0.4,
-                        0, dx, 0.22, dz, 1.0);
+        if (!(level instanceof ServerLevel sl)) return;
+        ItemParticleOption opt = new ItemParticleOption(ParticleTypes.ITEM, input.copyWithCount(1));
+
+        // Elegir 1 a 3 lados distintos al azar (más seguido 1, a veces 2 o 3)
+        Direction[] sides = {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
+        for (int i = sides.length - 1; i > 0; i--) {
+            int j = level.random.nextInt(i + 1);
+            Direction t = sides[i]; sides[i] = sides[j]; sides[j] = t;
+        }
+        int roll = level.random.nextInt(10);
+        int count = roll < 5 ? 1 : (roll < 8 ? 2 : 3);
+
+        for (int s = 0; s < count; s++) {
+            Direction dir = sides[s];
+            for (int i = 0; i < 5; i++) {
+                double lateral = (level.random.nextDouble() - 0.5) * 0.5;
+                double x = pos.getX() + 0.5 + dir.getStepX() * 0.5 + (dir.getAxis() == Direction.Axis.Z ? lateral : 0);
+                double z = pos.getZ() + 0.5 + dir.getStepZ() * 0.5 + (dir.getAxis() == Direction.Axis.X ? lateral : 0);
+                double y = pos.getY() + 0.4 + level.random.nextDouble() * 0.3;   // altura de la rueda
+                sl.sendParticles(opt, x, y, z, 0,
+                        dir.getStepX() * 0.12 + (level.random.nextDouble() - 0.5) * 0.05,
+                        0.06 + level.random.nextDouble() * 0.06,
+                        dir.getStepZ() * 0.12 + (level.random.nextDouble() - 0.5) * 0.05,
+                        1.0);
             }
         }
     }

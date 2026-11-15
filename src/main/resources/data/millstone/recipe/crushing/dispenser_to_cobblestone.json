@@ -1,0 +1,12 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:dispenser"
+    }
+  ],
+  "result": {
+    "id": "minecraft:cobblestone",
+    "count": 6
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:furnace"
+    }
+  ],
+  "result": {
+    "id": "minecraft:cobblestone",
+    "count": 7
+  }
+}

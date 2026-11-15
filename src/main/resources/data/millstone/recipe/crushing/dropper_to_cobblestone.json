@@ -1,0 +1,12 @@
+{
+  "type": "millstone:crushing",
+  "ingredient": [
+    {
+      "item": "minecraft:dropper"
+    }
+  ],
+  "result": {
+    "id": "minecraft:cobblestone",
+    "count": 6
+  }
+}

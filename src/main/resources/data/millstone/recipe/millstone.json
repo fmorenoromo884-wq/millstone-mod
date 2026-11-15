@@ -3,21 +3,18 @@
   "category": "misc",
   "pattern": [
     " H ",
-    "III",
-    "CRC"
+    "SSS",
+    "III"
   ],
   "key": {
     "H": {
       "item": "minecraft:hopper"
     },
+    "S": {
+      "item": "minecraft:stone"
+    },
     "I": {
       "item": "minecraft:iron_ingot"
-    },
-    "C": {
-      "item": "minecraft:cobblestone"
-    },
-    "R": {
-      "item": "minecraft:redstone"
     }
   },
   "result": {
