@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="encased_fan"
+version="${mod_version}"
+displayName="Encased Fan"
+description='''
+Redstone-powered encased fans that push entities and items, and (soon) process items through water, fire, lava and soul fire.
+'''
+
+[[dependencies.encased_fan]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.encased_fan]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"

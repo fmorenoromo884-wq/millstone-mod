@@ -1,0 +1,96 @@
+{
+  "variants": {
+    "facing=north,range=0": {
+      "model": "encased_fan:block/encased_golden_fan"
+    },
+    "facing=north,range=1": {
+      "model": "encased_fan:block/encased_golden_fan"
+    },
+    "facing=north,range=2": {
+      "model": "encased_fan:block/encased_golden_fan"
+    },
+    "facing=north,range=3": {
+      "model": "encased_fan:block/encased_golden_fan"
+    },
+    "facing=east,range=0": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 90
+    },
+    "facing=east,range=1": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 90
+    },
+    "facing=east,range=2": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 90
+    },
+    "facing=east,range=3": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 90
+    },
+    "facing=south,range=0": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 180
+    },
+    "facing=south,range=1": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 180
+    },
+    "facing=south,range=2": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 180
+    },
+    "facing=south,range=3": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 180
+    },
+    "facing=west,range=0": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 270
+    },
+    "facing=west,range=1": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 270
+    },
+    "facing=west,range=2": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 270
+    },
+    "facing=west,range=3": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "y": 270
+    },
+    "facing=up,range=0": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "x": 270
+    },
+    "facing=up,range=1": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "x": 270
+    },
+    "facing=up,range=2": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "x": 270
+    },
+    "facing=up,range=3": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "x": 270
+    },
+    "facing=down,range=0": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "x": 90
+    },
+    "facing=down,range=1": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "x": 90
+    },
+    "facing=down,range=2": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "x": 90
+    },
+    "facing=down,range=3": {
+      "model": "encased_fan:block/encased_golden_fan",
+      "x": 90
+    }
+  }
+}

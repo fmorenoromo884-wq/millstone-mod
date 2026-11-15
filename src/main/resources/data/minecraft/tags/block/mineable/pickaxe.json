@@ -1,5 +1,6 @@
 {
   "values": [
-    "millstone:millstone"
+    "encased_fan:encased_fan",
+    "encased_fan:encased_golden_fan"
   ]
 }
